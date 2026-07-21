@@ -1,0 +1,37 @@
+name: Report a content gap or correction
+about: Identify an unclear claim, missing boundary, broken reference, or translation problem.
+title: "[Content]: "
+labels: [content-gap]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File and section
+      placeholder: docs/en/06-testing.md — Independent test oracles
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Factual correction
+        - Missing evidence
+        - Missing boundary or counterexample
+        - Unclear method
+        - Broken link
+        - Translation issue
+        - Related work
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested correction or source

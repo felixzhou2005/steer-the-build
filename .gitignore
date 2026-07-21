@@ -1,0 +1,15 @@
+site/
+.venv/
+__pycache__/
+.DS_Store
+.idea/
+.vscode/
+*.log
+.site-src/
+.pytest_cache/
+
+# Local drafts — not part of the public v0.1 release.
+# Remove an entry when that section is reviewed and ready to publish.
+/case-studies/
+/skills/
+/social/

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability or sensitive disclosure
+    url: https://github.com/felixzhou2005/steer-the-build/security/advisories/new
+    about: Do not publish exploitable details in a public issue.
+  - name: Open-ended discussion
+    url: https://github.com/felixzhou2005/steer-the-build/discussions
+    about: Use Discussions for broad questions, experience exchange, and early ideas.

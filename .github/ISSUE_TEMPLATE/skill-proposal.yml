@@ -1,0 +1,49 @@
+name: Propose or improve a skill
+about: Add a reusable rule derived from evidence.
+title: "[Skill]: "
+labels: [skill-proposal, evidence-needed]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Layer
+      options:
+        - Foundational
+        - Domain
+        - Project
+        - Task example
+    validations:
+      required: true
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Trigger and scope
+      description: When should the skill run, and where should it not run?
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure evidence
+      description: Which real or reproducible failure does this prevent?
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Proposed rules and verification contract
+    validations:
+      required: true
+  - type: checkboxes
+    id: validation
+    attributes:
+      label: Validation
+      options:
+        - label: I tested or reviewed the skill against at least one concrete case.
+          required: true

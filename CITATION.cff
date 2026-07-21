@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this field guide, please cite it as below."
+title: "Steer the Build: Human-Controlled, Evidence-Driven AI Software Engineering"
+type: generic
+version: 0.1.0
+date-released: 2026-07-20
+authors:
+  - family-names: "Zhou"
+    given-names: "Felix Hui"
+license: CC-BY-4.0
+repository-code: "https://github.com/felixzhou2005/steer-the-build"
+abstract: "A bilingual field guide and template library for controlling large-scale AI-assisted software engineering through documentation, architecture, testing, observability, review, and human accountability."
+keywords:
+  - AI coding
+  - software engineering
+  - coding agents
+  - evidence-driven development
+  - human-in-the-loop

@@ -1,0 +1,152 @@
+site_name: Steer the Build
+site_description: Human-Controlled, Evidence-Driven AI Software Engineering
+site_url: https://felixzhou2005.github.io/steer-the-build/
+repo_url: https://github.com/felixzhou2005/steer-the-build
+repo_name: felixzhou2005/steer-the-build
+edit_uri: edit/main/
+docs_dir: .site-src
+site_dir: site
+strict: true
+
+validation:
+  omitted_files: ignore
+  absolute_links: relative_to_docs
+  unrecognized_links: warn
+
+watch:
+  - docs
+  - templates
+  - research
+  - meta
+
+nav:
+  - Home: docs/index.md
+  - English:
+      - Start: docs/en/index.md
+      - Positioning: docs/en/00-positioning.md
+      - Core theses: docs/en/01-core-theses.md
+      - Four-plane control model: docs/en/02-control-model.md
+      - Documentation and requirements: docs/en/03-documentation-and-requirements.md
+      - Architecture and planning: docs/en/04-architecture-and-planning.md
+      - AI-native review: docs/en/05-ai-native-review.md
+      - Testing: docs/en/06-testing.md
+      - Observability and diagnosis: docs/en/07-observability-and-debugging.md
+      - Performance, release, and DevOps: docs/en/08-performance-release-devops.md
+      - Skills: docs/en/09-skills.md
+      - Human role and software sense: docs/en/10-human-role-and-sense.md
+      - Risks and governance: docs/en/11-risks-and-governance.md
+      - Execution system: docs/en/12-execution-system.md
+      - Project types: docs/en/13-project-types.md
+      - Software economics: docs/en/14-software-economics.md
+      - Templates and prompts: docs/en/15-templates-and-prompts.md
+      - Reflection questions: docs/en/16-reflection-questions.md
+      - Case strategy: docs/en/17-case-study-strategy.md
+      - Community and publication: docs/en/18-community-and-publication.md
+      - Conclusion: docs/en/19-conclusion.md
+  - 中文:
+      - 开始: docs/zh-CN/index.md
+      - 完整核心方法论: docs/zh-CN/full-book.md
+      - 项目定位: docs/zh-CN/00-positioning.md
+      - 核心结论: docs/zh-CN/01-core-theses.md
+      - 四平面控制模型: docs/zh-CN/02-control-model.md
+      - 文档与需求: docs/zh-CN/03-documentation-and-requirements.md
+      - 架构与方案: docs/zh-CN/04-architecture-and-planning.md
+      - AI 原生 Review: docs/zh-CN/05-ai-native-review.md
+      - 自动化测试: docs/zh-CN/06-testing.md
+      - 可观察性与诊断: docs/zh-CN/07-observability-and-debugging.md
+      - 性能、发布与 DevOps: docs/zh-CN/08-performance-release-devops.md
+      - Skill: docs/zh-CN/09-skills.md
+      - 人的价值与软件 Sense: docs/zh-CN/10-human-role-and-sense.md
+      - 风险与治理: docs/zh-CN/11-risks-and-governance.md
+      - 执行系统: docs/zh-CN/12-execution-system.md
+      - 项目类型: docs/zh-CN/13-project-types.md
+      - 软件经济学: docs/zh-CN/14-software-economics.md
+      - 模板与提示: docs/zh-CN/15-templates-and-prompts.md
+      - 反思问题: docs/zh-CN/16-reflection-questions.md
+      - 案例策略: docs/zh-CN/17-case-study-strategy.md
+      - 社区与发布: docs/zh-CN/18-community-and-publication.md
+      - 结语: docs/zh-CN/19-conclusion.md
+  - Templates:
+      - Overview: template-library/README.md
+      - 模板总览: template-library/README.zh-CN.md
+      - Project AI constitution: template-library/en/project-ai-constitution.md
+      - Product requirements: template-library/en/product-requirements.md
+      - Architecture design: template-library/en/architecture-design.md
+      - Implementation plan: template-library/en/implementation-plan.md
+      - Test strategy: template-library/en/test-strategy.md
+      - AI review report: template-library/en/ai-review-report.md
+      - Observability specification: template-library/en/observability-spec.md
+      - 项目 AI 宪法: template-library/zh-CN/project-ai-constitution.md
+      - 产品需求: template-library/zh-CN/product-requirements.md
+      - 架构设计: template-library/zh-CN/architecture-design.md
+      - 实现方案: template-library/zh-CN/implementation-plan.md
+      - 测试策略: template-library/zh-CN/test-strategy.md
+  - Research:
+      - Overview: research/README.md
+      - Related work: research/related-work.md
+      - Differentiation: research/differentiation.md
+      - Glossary: research/glossary.md
+      - Source policy: research/source-review-policy.md
+      - 相关工作: research/related-work.zh-CN.md
+      - 差异化: research/differentiation.zh-CN.md
+      - 术语表: research/glossary.zh-CN.md
+  - Community:
+      - Contributing: CONTRIBUTING.md
+      - 中文贡献指南: CONTRIBUTING.zh-CN.md
+      - Roadmap: ROADMAP.md
+      - Governance: GOVERNANCE.md
+      - Security: SECURITY.md
+      - Content status: meta/content-status.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  alternate:
+    - name: English
+      link: /steer-the-build/docs/en/
+      lang: en
+    - name: 简体中文
+      link: /steer-the-build/docs/zh-CN/
+      lang: zh
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/felixzhou2005/steer-the-build
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/felix-hui-zhou-32a10658/
+
+copyright: >-
+  Documentation under CC BY 4.0; reusable templates and configuration examples under MIT.

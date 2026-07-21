@@ -1,0 +1,62 @@
+name: Field experience report
+about: Share an evidence-backed observation, failure, or counterexample from AI software engineering.
+title: "[Experience]: "
+labels: [experience-report, evidence-needed]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for adding field evidence. Remove confidential information and distinguish measured facts from interpretation.
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: Project type
+      options:
+        - Business application
+        - Mobile
+        - Web
+        - Machine learning / algorithm
+        - Voice / realtime AI
+        - IoT / hardware-adjacent
+        - Agent automation
+        - Infrastructure / DevOps
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and constraints
+      description: What was being built, and what made it difficult?
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observable event
+      description: Expected behavior, actual behavior, and evidence available.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnosis
+    attributes:
+      label: Diagnosis and first divergence
+      description: How was the cause isolated? State uncertainty where it remains.
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: Proposed lesson or counterexample
+      description: Which existing principle should be strengthened, narrowed, or challenged?
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Publication safety
+      options:
+        - label: I removed secrets, personal data, customer identifiers, and exploitable details.
+          required: true
+        - label: Every number is measured, sourced, or clearly marked as an estimate.
+          required: true

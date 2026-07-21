@@ -1,0 +1,37 @@
+name: Documentation quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install documentation dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-docs.txt
+
+      - name: Check local links
+        run: python scripts/check_links.py
+
+      - name: Check bilingual pairs
+        run: python scripts/check_bilingual.py
+
+      - name: Prepare documentation site
+        run: python scripts/prepare_site.py
+
+      - name: Build documentation strictly
+        run: mkdocs build --strict
